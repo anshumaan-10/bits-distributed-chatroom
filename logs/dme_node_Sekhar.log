@@ -1,0 +1,26 @@
+[27 Apr 2026 16:06:37] [Clock=0] INFO: DME node 'Sekhar' initialized, listening on port 6002
+[27 Apr 2026 16:06:37] [Clock=0] INFO: DME middleware ready. Peers: ['Anshumaan']
+[27 Apr 2026 16:08:37] [Clock=2] INFO: RECV REQUEST(ts=1) from Anshumaan
+[27 Apr 2026 16:08:37] [Clock=3] INFO: SENT REPLY(ts=3) to Anshumaan
+[27 Apr 2026 16:08:37] [Clock=6] INFO: RECV RELEASE(ts=5) from Anshumaan
+[27 Apr 2026 16:09:51] [Clock=6] INFO: ===== REQUESTING CRITICAL SECTION =====
+[27 Apr 2026 16:09:51] [Clock=7] INFO: Broadcast REQUEST(ts=7) to all peers
+[27 Apr 2026 16:09:51] [Clock=7] INFO: Waiting for CS grant...
+[27 Apr 2026 16:09:51] [Clock=10] INFO: RECV REPLY(ts=9) from Anshumaan
+[27 Apr 2026 16:09:51] [Clock=10] INFO: CS CONDITIONS MET: head of queue (ts=7) and all 1 replies received
+[27 Apr 2026 16:09:51] [Clock=10] INFO: ===== ENTERED CRITICAL SECTION =====
+[27 Apr 2026 16:09:51] [Clock=10] INFO: ===== RELEASING CRITICAL SECTION =====
+[27 Apr 2026 16:09:51] [Clock=11] INFO: Broadcast RELEASE(ts=11) to all peers
+[27 Apr 2026 16:09:51] [Clock=11] INFO: ===== CRITICAL SECTION RELEASED =====
+[27 Apr 2026 15:15:17] [Clock=2] INFO: RECV REQUEST(ts=1) from Anshumaan
+[27 Apr 2026 15:15:17] [Clock=3] INFO: SENT REPLY(ts=3) to Anshumaan
+[27 Apr 2026 15:15:17] [Clock=3] INFO: ===== REQUESTING CRITICAL SECTION =====
+[27 Apr 2026 15:15:17] [Clock=4] INFO: Broadcast REQUEST(ts=4) to all peers
+[27 Apr 2026 15:15:17] [Clock=4] INFO: Waiting for CS grant...
+[27 Apr 2026 15:15:17] [Clock=6] INFO: RECV RELEASE(ts=5) from Anshumaan
+[27 Apr 2026 15:15:17] [Clock=6] INFO: RECV REPLY(ts=5) from Anshumaan
+[27 Apr 2026 15:15:17] [Clock=6] INFO: CS CONDITIONS MET: head of queue (ts=4) and all 1 replies received
+[27 Apr 2026 15:15:18] [Clock=6] INFO: ===== ENTERED CRITICAL SECTION =====
+[27 Apr 2026 15:15:18] [Clock=6] INFO: ===== RELEASING CRITICAL SECTION =====
+[27 Apr 2026 15:15:18] [Clock=7] INFO: Broadcast RELEASE(ts=7) to all peers
+[27 Apr 2026 15:15:18] [Clock=7] INFO: ===== CRITICAL SECTION RELEASED =====

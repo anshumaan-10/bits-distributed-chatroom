@@ -1,0 +1,20 @@
+[27 Apr 2026 16:06:16] INFO: ============================================================
+[27 Apr 2026 16:06:16] INFO: File Server started on 0.0.0.0:5000
+[27 Apr 2026 16:06:16] INFO: Shared chat file: /home/admin/distributed-chatroom/server/chat.txt
+[27 Apr 2026 16:06:16] INFO: ============================================================
+[27 Apr 2026 16:07:51] INFO: VIEW request from ('10.128.15.211', 51816)
+[27 Apr 2026 16:07:51] INFO: VIEW response sent to ('10.128.15.211', 51816) (0 bytes)
+[27 Apr 2026 16:08:37] INFO: POST request from ('10.128.15.211', 42832): 27 Apr 4:08PM Anshumaan: Welcome to the team project
+[27 Apr 2026 16:08:37] INFO: POST completed for ('10.128.15.211', 42832)
+[27 Apr 2026 16:09:07] INFO: VIEW request from ('10.128.15.209', 37104)
+[27 Apr 2026 16:09:07] INFO: VIEW response sent to ('10.128.15.209', 37104) (53 bytes)
+[27 Apr 2026 16:09:51] INFO: POST request from ('10.128.15.209', 33368): 27 Apr 4:09PM Sekhar: Thanks Anshumaan - great to be here!
+[27 Apr 2026 16:09:51] INFO: POST completed for ('10.128.15.209', 33368)
+[27 Apr 2026 15:14:32] INFO: VIEW request from ('10.128.15.211', 38136)
+[27 Apr 2026 15:14:32] INFO: VIEW response sent to ('10.128.15.211', 38136) (112 bytes)
+[27 Apr 2026 15:14:17] INFO: POST request from ('10.128.15.211', 50974): 27 Apr 3:15PM Anshumaan: Concurrent write from Anshumaan
+[27 Apr 2026 15:15:17] INFO: POST completed for ('10.128.15.211', 50974)
+[27 Apr 2026 15:15:18] INFO: POST request from ('10.128.15.209', 57396): 27 Apr 3:15PM Sekhar: Concurrent write from Sekhar
+[27 Apr 2026 15:15:18] INFO: POST completed for ('10.128.15.209', 57396)
+[27 Apr 2026 15:15:48] INFO: VIEW request from ('10.128.15.209', 46032)
+[27 Apr 2026 15:15:48] INFO: VIEW response sent to ('10.128.15.209', 46032) (223 bytes)

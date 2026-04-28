@@ -1,0 +1,7 @@
+Video Demo Recording - DC Group 8 Assignment 2
+================================================
+
+https://wilpbitspilaniacin0-my.sharepoint.com/:v:/g/personal/2025mt13014_wilp_bits-pilani_ac_in/IQCPsUQpDZR7RLsRHQxdg3JRAb5US_yXnwd3neVlfZ9HCFA?e=V4ZsjS
+
+This video demonstrates the complete distributed chat room system
+running on 3 Google Cloud Platform VMs with Lamport's DME algorithm.

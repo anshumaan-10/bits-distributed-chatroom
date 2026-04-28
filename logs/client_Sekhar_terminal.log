@@ -1,0 +1,44 @@
+admin@dc-server2:~/distributed-chatroom$ python3 client/chat_app.py --node-id Sekhar --config config.json
+Initializing DME middleware...
+[27 Apr 2026 16:06:37] [Clock=0] INFO: DME node 'Sekhar' initialized, listening on port 6002
+DME middleware ready. Peers: ['Anshumaan']
+============================================================
+  Distributed Chat Room - CCZG 526 Assignment
+  Group 8
+  Node: Sekhar
+============================================================
+
+Commands:
+  view              - View all messages
+  post <message>    - Post a new message
+  post "<message>"  - Post message (with quotes)
+  status            - Show DME queue state
+  exit / quit       - Exit the application
+
+Sekhar_machine> [27 Apr 2026 16:08:37] [Clock=2] INFO: RECV REQUEST(ts=1) from Anshumaan
+[27 Apr 2026 16:08:37] [Clock=3] INFO: SENT REPLY(ts=3) to Anshumaan
+[27 Apr 2026 16:08:37] [Clock=6] INFO: RECV RELEASE(ts=5) from Anshumaan
+view
+27 Apr 4:08PM Anshumaan: Welcome to the team project
+Sekhar_machine> post "Thanks Anshumaan - great to be here!"
+[DME] Requesting write access...
+[27 Apr 2026 16:09:51] [Clock=6] INFO: ===== REQUESTING CRITICAL SECTION =====
+[27 Apr 2026 16:09:51] [Clock=7] INFO: Broadcast REQUEST(ts=7) to all peers
+[27 Apr 2026 16:09:51] [Clock=7] INFO: Waiting for CS grant...
+[27 Apr 2026 16:09:51] [Clock=10] INFO: RECV REPLY(ts=9) from Anshumaan
+[27 Apr 2026 16:09:51] [Clock=10] INFO: CS CONDITIONS MET: head of queue (ts=7) and all 1 replies received
+[27 Apr 2026 16:09:51] [Clock=10] INFO: ===== ENTERED CRITICAL SECTION =====
+[DME] Write access granted.
+Message posted: 27 Apr 4:09PM Sekhar: Thanks Anshumaan - great to be here!
+[27 Apr 2026 16:09:51] [Clock=10] INFO: ===== RELEASING CRITICAL SECTION =====
+[27 Apr 2026 16:09:51] [Clock=11] INFO: Broadcast RELEASE(ts=11) to all peers
+[27 Apr 2026 16:09:51] [Clock=11] INFO: ===== CRITICAL SECTION RELEASED =====
+[DME] Write access released.
+Sekhar_machine> view
+27 Apr 4:08PM Anshumaan: Welcome to the team project
+27 Apr 4:09PM Sekhar: Thanks Anshumaan - great to be here!
+Sekhar_machine> status
+Lamport Clock: 11
+Request Queue: []
+Sekhar_machine> exit
+Goodbye!

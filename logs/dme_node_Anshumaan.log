@@ -1,0 +1,26 @@
+[27 Apr 2026 16:06:36] [Clock=0] INFO: DME node 'Anshumaan' initialized, listening on port 6001
+[27 Apr 2026 16:06:36] [Clock=0] INFO: DME middleware ready. Peers: ['Sekhar']
+[27 Apr 2026 16:08:37] [Clock=0] INFO: ===== REQUESTING CRITICAL SECTION =====
+[27 Apr 2026 16:08:37] [Clock=1] INFO: Broadcast REQUEST(ts=1) to all peers
+[27 Apr 2026 16:08:37] [Clock=1] INFO: Waiting for CS grant...
+[27 Apr 2026 16:08:37] [Clock=3] INFO: RECV REPLY(ts=3) from Sekhar
+[27 Apr 2026 16:08:37] [Clock=4] INFO: CS CONDITIONS MET: head of queue (ts=1) and all 1 replies received
+[27 Apr 2026 16:08:37] [Clock=4] INFO: ===== ENTERED CRITICAL SECTION =====
+[27 Apr 2026 16:08:37] [Clock=4] INFO: ===== RELEASING CRITICAL SECTION =====
+[27 Apr 2026 16:08:37] [Clock=5] INFO: Broadcast RELEASE(ts=5) to all peers
+[27 Apr 2026 16:08:37] [Clock=5] INFO: ===== CRITICAL SECTION RELEASED =====
+[27 Apr 2026 16:09:51] [Clock=8] INFO: RECV REQUEST(ts=7) from Sekhar
+[27 Apr 2026 16:09:51] [Clock=9] INFO: SENT REPLY(ts=9) to Sekhar
+[27 Apr 2026 16:09:51] [Clock=12] INFO: RECV RELEASE(ts=11) from Sekhar
+[27 Apr 2026 15:15:17] [Clock=0] INFO: ===== REQUESTING CRITICAL SECTION =====
+[27 Apr 2026 15:15:17] [Clock=1] INFO: Broadcast REQUEST(ts=1) to all peers
+[27 Apr 2026 15:15:17] [Clock=1] INFO: Waiting for CS grant...
+[27 Apr 2026 15:15:17] [Clock=2] INFO: RECV REQUEST(ts=1) from Sekhar
+[27 Apr 2026 15:15:17] [Clock=3] INFO: SENT REPLY(ts=3) to Sekhar
+[27 Apr 2026 15:15:17] [Clock=4] INFO: RECV REPLY(ts=3) from Sekhar
+[27 Apr 2026 15:15:17] [Clock=4] INFO: CS CONDITIONS MET: head of queue (ts=1) and all 1 replies received
+[27 Apr 2026 15:15:17] [Clock=4] INFO: ===== ENTERED CRITICAL SECTION =====
+[27 Apr 2026 15:15:17] [Clock=4] INFO: ===== RELEASING CRITICAL SECTION =====
+[27 Apr 2026 15:15:17] [Clock=5] INFO: Broadcast RELEASE(ts=5) to all peers
+[27 Apr 2026 15:15:17] [Clock=5] INFO: ===== CRITICAL SECTION RELEASED =====
+[27 Apr 2026 15:15:18] [Clock=8] INFO: RECV RELEASE(ts=7) from Sekhar

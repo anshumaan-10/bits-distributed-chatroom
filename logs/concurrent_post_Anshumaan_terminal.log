@@ -1,0 +1,17 @@
+Anshumaan_machine> post "Concurrent write from Anshumaan"
+[DME] Requesting write access...
+[27 Apr 2026 15:15:17] [Clock=0] INFO: ===== REQUESTING CRITICAL SECTION =====
+[27 Apr 2026 15:15:17] [Clock=1] INFO: Broadcast REQUEST(ts=1) to all peers
+[27 Apr 2026 15:15:17] [Clock=1] INFO: Waiting for CS grant...
+[27 Apr 2026 15:15:17] [Clock=2] INFO: RECV REQUEST(ts=1) from Sekhar
+[27 Apr 2026 15:15:17] [Clock=3] INFO: SENT REPLY(ts=3) to Sekhar
+[27 Apr 2026 15:15:17] [Clock=4] INFO: RECV REPLY(ts=3) from Sekhar
+[27 Apr 2026 15:15:17] [Clock=4] INFO: CS CONDITIONS MET: head of queue (ts=1) and all 1 replies received
+[27 Apr 2026 15:15:17] [Clock=4] INFO: ===== ENTERED CRITICAL SECTION =====
+[DME] Write access granted.
+Message posted: 27 Apr 3:15PM Anshumaan: Concurrent write from Anshumaan
+[27 Apr 2026 15:15:17] [Clock=4] INFO: ===== RELEASING CRITICAL SECTION =====
+[27 Apr 2026 15:15:17] [Clock=5] INFO: Broadcast RELEASE(ts=5) to all peers
+[27 Apr 2026 15:15:17] [Clock=5] INFO: ===== CRITICAL SECTION RELEASED =====
+[DME] Write access released.
+Anshumaan_machine>

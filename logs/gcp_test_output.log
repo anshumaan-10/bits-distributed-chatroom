@@ -1,0 +1,38 @@
+=== GCP End-to-End Test from dc-client (Anshumaan) ===
+
+admin@dc-client:~/distributed-chatroom$ python3 tests/test_gcp.py Anshumaan
+=== GCP End-to-End Test from Anshumaan ===
+File server: 10.128.15.210:5000
+
+[TEST 1] VIEW request...
+  Response: OK|
+  PASS: VIEW works
+
+[TEST 2] POST request: [Anshumaan] Hello from GCP test!
+  Response: OK|Message posted successfully
+  PASS: POST works
+
+[TEST 3] VIEW after POST...
+  PASS: Our message found in chat
+
+=== All basic tests passed for Anshumaan ===
+
+
+=== GCP End-to-End Test from dc-server2 (Sekhar) ===
+
+admin@dc-server2:~/distributed-chatroom$ python3 tests/test_gcp.py Sekhar
+=== GCP End-to-End Test from Sekhar ===
+File server: 10.128.15.210:5000
+
+[TEST 1] VIEW request...
+  Response: OK|[Anshumaan] Hello from GCP test!
+  PASS: VIEW works
+
+[TEST 2] POST request: [Sekhar] Hello from GCP test!
+  Response: OK|Message posted successfully
+  PASS: POST works
+
+[TEST 3] VIEW after POST...
+  PASS: Our message found in chat
+
+=== All basic tests passed for Sekhar ===

@@ -1,0 +1,43 @@
+admin@dc-client:~/distributed-chatroom$ python3 client/chat_app.py --node-id Anshumaan --config config.json
+Initializing DME middleware...
+[27 Apr 2026 16:06:36] [Clock=0] INFO: DME node 'Sekhar' initialized, listening on port 60
+01
+DME middleware ready. Peers: ['Sekhar']
+============================================================
+  Distributed Chat Room - CCZG 526 Assignment
+  Group 8
+  Node: Anshumaan
+============================================================
+
+Commands:
+  view              - View all messages
+  post <message>    - Post a new message
+  post "<message>"  - Post message (with quotes)
+  status            - Show DME queue state
+  exit / quit       - Exit the application
+
+Anshumaan_machine> view
+(No messages yet)
+Anshumaan_machine> post "Welcome to the team project"
+[DME] Requesting write access...
+[27 Apr 2026 16:08:37] [Clock=0] INFO: ===== REQUESTING CRITICAL SECTION =====
+[27 Apr 2026 16:08:37] [Clock=1] INFO: Broadcast REQUEST(ts=1) to all peers
+[27 Apr 2026 16:08:37] [Clock=1] INFO: Waiting for CS grant...
+[27 Apr 2026 16:08:37] [Clock=3] INFO: RECV REPLY(ts=3) from Sekhar
+[27 Apr 2026 16:08:37] [Clock=4] INFO: CS CONDITIONS MET: head of queue (ts=1) and all 1 replies received
+[27 Apr 2026 16:08:37] [Clock=4] INFO: ===== ENTERED CRITICAL SECTION =====
+[DME] Write access granted.
+Message posted: 27 Apr 4:08PM Anshumaan: Welcome to the team project
+[27 Apr 2026 16:08:37] [Clock=4] INFO: ===== RELEASING CRITICAL SECTION =====
+[27 Apr 2026 16:08:37] [Clock=5] INFO: Broadcast RELEASE(ts=5) to all peers
+[27 Apr 2026 16:08:37] [Clock=5] INFO: ===== CRITICAL SECTION RELEASED =====
+[DME] Write access released.
+Anshumaan_machine> view
+27 Apr 4:08PM Anshumaan: Welcome to the team project
+Anshumaan_machine> [27 Apr 2026 16:09:51] [Clock=8] INFO: RECV REQUEST(ts=7) from Sekhar
+[27 Apr 2026 16:09:51] [Clock=9] INFO: SENT REPLY(ts=9) to Sekhar
+[27 Apr 2026 16:09:51] [Clock=12] INFO: RECV RELEASE(ts=11) from Sekhar
+view
+27 Apr 4:08PM Anshumaan: Welcome to the team project
+27 Apr 4:09PM Sekhar: Thanks Anshumaan - great to be here!
+Anshumaan_machine>

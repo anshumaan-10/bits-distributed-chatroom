@@ -1,0 +1,41 @@
+$ python3 tests/test_local.py
+============================================================
+  Distributed Chat Room - Local Integration Tests
+  Group 8 - CCZG 526
+============================================================
+[Setup] File server started (PID: 48231)
+
+--- TC1: Single Post and View ---
+  [PASS] TC1a - Post message
+  [PASS] TC1b - View contains posted message - Got: 25 Apr 9:01AM TestUser1: Hello World
+
+--- TC2: Concurrent Views ---
+  [PASS] TC2 - Both users view concurrently - User1 err=None, User2 err=None
+  [PASS] TC2b - Both see same content
+
+--- TC3: Concurrent Posts with DME ---
+  [PASS] TC3 - Both users posted with DME - User1=True, User2=True
+  [PASS] TC3b - Both messages in chat file
+  [PASS] TC3c - DME log files created
+  [PASS] TC3d - DME logs contain REQUEST/REPLY/RELEASE
+
+--- TC4: Sequential Alternating Posts ---
+  [PASS] TC4 - Sequential posts all succeeded
+  [PASS] TC4b - All messages present in chat file
+
+--- TC5: Final View Shows All Messages ---
+  [PASS] TC5 - Chat file has all messages (6 lines)
+
+  Final chat file contents:
+    25 Apr 9:01AM TestUser1: Hello World
+    25 Apr 9:10AM TestUser1: Message from User1
+    25 Apr 9:10AM TestUser2: Message from User2
+    25 Apr 9:20AM TestUser1: First message
+    25 Apr 9:21AM TestUser2: Second message
+    25 Apr 9:22AM TestUser1: Third message
+
+[Teardown] File server stopped.
+
+============================================================
+  Results: 11 PASSED, 0 FAILED
+============================================================
